@@ -36,7 +36,6 @@ resource "aws_instance" "app-dev" {
   count         = 2
   tags = {
     Name = element(var.tags, count.index)
-    # or   Name = var.tags[count.index]
   }
 }
 
